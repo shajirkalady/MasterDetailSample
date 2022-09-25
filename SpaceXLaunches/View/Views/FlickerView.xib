@@ -1,0 +1,85 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="19529" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+    <device id="retina6_1" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="19519"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="System colors in document resources" minToolsVersion="11.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="FlickerView" customModule="SpaceXLaunches" customModuleProvider="target">
+            <connections>
+                <outlet property="contentView" destination="iN0-l3-epB" id="IgI-BM-Mgs"/>
+                <outlet property="pageControl" destination="EjX-U9-Wke" id="2Gp-QU-RSs"/>
+                <outlet property="scrolContentView" destination="0g0-dj-xyD" id="zxH-15-cDB"/>
+                <outlet property="scrollContentViewWidth" destination="eEa-6m-mgF" id="cLA-JV-19Q"/>
+                <outlet property="scrollView" destination="vQu-aT-jXc" id="82A-FZ-Orb"/>
+            </connections>
+        </placeholder>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <view contentMode="scaleToFill" id="iN0-l3-epB">
+            <rect key="frame" x="0.0" y="0.0" width="414" height="575"/>
+            <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+            <subviews>
+                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Flicker Images" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="cl6-Fn-iag">
+                    <rect key="frame" x="20" y="52" width="136" height="24"/>
+                    <fontDescription key="fontDescription" type="boldSystem" pointSize="20"/>
+                    <nil key="textColor"/>
+                    <nil key="highlightedColor"/>
+                </label>
+                <scrollView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" pagingEnabled="YES" showsVerticalScrollIndicator="NO" translatesAutoresizingMaskIntoConstraints="NO" id="vQu-aT-jXc">
+                    <rect key="frame" x="0.0" y="84" width="414" height="447"/>
+                    <subviews>
+                        <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="0g0-dj-xyD">
+                            <rect key="frame" x="0.0" y="0.0" width="414" height="447"/>
+                            <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                            <constraints>
+                                <constraint firstAttribute="width" constant="414" id="eEa-6m-mgF"/>
+                            </constraints>
+                        </view>
+                    </subviews>
+                    <constraints>
+                        <constraint firstItem="0g0-dj-xyD" firstAttribute="top" secondItem="MDf-Fr-3eG" secondAttribute="top" id="3ot-uP-vYp"/>
+                        <constraint firstItem="0g0-dj-xyD" firstAttribute="leading" secondItem="MDf-Fr-3eG" secondAttribute="leading" id="AUJ-ur-2Hd"/>
+                        <constraint firstItem="Ij0-zI-Wx5" firstAttribute="height" secondItem="0g0-dj-xyD" secondAttribute="height" id="kAi-L6-LzF"/>
+                        <constraint firstItem="0g0-dj-xyD" firstAttribute="bottom" secondItem="MDf-Fr-3eG" secondAttribute="bottom" id="ky6-W0-nBl"/>
+                        <constraint firstItem="0g0-dj-xyD" firstAttribute="trailing" secondItem="MDf-Fr-3eG" secondAttribute="trailing" id="wpj-Uv-5gQ"/>
+                    </constraints>
+                    <viewLayoutGuide key="contentLayoutGuide" id="MDf-Fr-3eG"/>
+                    <viewLayoutGuide key="frameLayoutGuide" id="Ij0-zI-Wx5"/>
+                    <connections>
+                        <outlet property="delegate" destination="-1" id="PQr-yY-flG"/>
+                    </connections>
+                </scrollView>
+                <pageControl opaque="NO" userInteractionEnabled="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" hidesForSinglePage="YES" numberOfPages="3" translatesAutoresizingMaskIntoConstraints="NO" id="EjX-U9-Wke">
+                    <rect key="frame" x="149" y="539" width="116" height="26"/>
+                    <color key="pageIndicatorTintColor" white="0.66666666669999997" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                    <color key="currentPageIndicatorTintColor" systemColor="tintColor"/>
+                </pageControl>
+            </subviews>
+            <viewLayoutGuide key="safeArea" id="vUN-kp-3ea"/>
+            <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+            <constraints>
+                <constraint firstItem="EjX-U9-Wke" firstAttribute="top" secondItem="vQu-aT-jXc" secondAttribute="bottom" constant="8" id="4hS-qe-61j"/>
+                <constraint firstItem="cl6-Fn-iag" firstAttribute="leading" secondItem="vUN-kp-3ea" secondAttribute="leading" constant="20" id="Brm-f1-Yoq"/>
+                <constraint firstItem="EjX-U9-Wke" firstAttribute="centerX" secondItem="vQu-aT-jXc" secondAttribute="centerX" id="EOp-OL-Z7i"/>
+                <constraint firstItem="vQu-aT-jXc" firstAttribute="top" secondItem="cl6-Fn-iag" secondAttribute="bottom" constant="8" id="e2D-Jo-laK"/>
+                <constraint firstItem="vQu-aT-jXc" firstAttribute="leading" secondItem="vUN-kp-3ea" secondAttribute="leading" id="fzd-kP-Wj5"/>
+                <constraint firstItem="cl6-Fn-iag" firstAttribute="top" secondItem="vUN-kp-3ea" secondAttribute="top" constant="8" id="qiw-6T-aDS"/>
+                <constraint firstItem="vQu-aT-jXc" firstAttribute="trailing" secondItem="vUN-kp-3ea" secondAttribute="trailing" id="y5y-wo-Elv"/>
+                <constraint firstItem="vUN-kp-3ea" firstAttribute="bottom" secondItem="EjX-U9-Wke" secondAttribute="bottom" constant="10" id="ztj-W5-W5T"/>
+            </constraints>
+            <freeformSimulatedSizeMetrics key="simulatedDestinationMetrics"/>
+            <point key="canvasLocation" x="137.68115942028987" y="-95.424107142857139"/>
+        </view>
+    </objects>
+    <resources>
+        <systemColor name="systemBackgroundColor">
+            <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+        </systemColor>
+        <systemColor name="tintColor">
+            <color red="0.0" green="0.47843137254901963" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </systemColor>
+    </resources>
+</document>
