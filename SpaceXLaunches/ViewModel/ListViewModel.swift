@@ -7,6 +7,11 @@
 
 import Foundation
 
+/*
+ * View model for the split views
+ * Load the data from server and decode to the model
+ */
+
 class ListViewModel {
     let launchesUrl = URL(string: "https://api.spacexdata.com/v3/launches")!
     
